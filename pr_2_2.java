@@ -3,8 +3,8 @@ import java.util.*;
 public class pr_2_2 {
     public static void main(String[] args) {
         System.out.println("An example for you to to create a proper account :");
-        account d2_1 =new account();
-        d2_1.Accessor();
+        account def_obj =new account();
+        def_obj.Accessor();
         Scanner s = new Scanner(System.in);
         
         int id;
@@ -34,7 +34,7 @@ public class pr_2_2 {
                 System.out.println("Enter amount to be withdrawn  :");
                 withdraw = s.nextDouble();
                 obj.withdraw(withdraw);
-                System.out.println("The amount remained in your account after withdrawal is   :"+d2_2.balance);
+                System.out.println("The amount remained in your account after withdrawal is   :"+obj.balance);
                 break;
             }
             case 2 :
@@ -84,7 +84,7 @@ public class pr_2_2 {
                         System.out.println("Enter amount to be withdrawn  :");
                         withdraw = s.nextDouble();
                         obj.withdraw(withdraw);
-                        System.out.println("The amount remained in your account after withdrawal is   :"+d2_2.balance);
+                        System.out.println("The amount remained in your account after withdrawal is   :"+obj.balance);
                         break;
                     }
                     case 2 :
