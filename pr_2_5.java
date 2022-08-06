@@ -1,11 +1,14 @@
 public class pr_2_5 
 {
+    //mrthod for show student information
     public static void information(String roll_no,String name,String branch)
     {
         System.out.println("The name of the Student is  :"+name);
         System.out.println("The roll no of the student is  "+roll_no);
         System.out.println(name+ " studies in "+branch);
     }
+
+    //override information method for faculty
     public static void information(String name ,String degree, String faculty_of,int experience,long salary)
     {
         System.out.println("Name of the professor is  :"+name);

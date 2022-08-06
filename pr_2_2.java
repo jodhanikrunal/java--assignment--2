@@ -1,8 +1,13 @@
+//Name : Krunal Jodhani
+//Id no : 21CE045
+//Git Hub link : https://github.com/jodhanikrunal/java--assignment--2
+
 import java.util.*;
 
 public class pr_2_2 {
     public static void main(String[] args) {
         System.out.println("An example for you to to create a proper account :");
+        //create object of account file which called default constructor
         account def_obj =new account();
         def_obj.Accessor();
         Scanner s = new Scanner(System.in);
@@ -10,13 +15,17 @@ public class pr_2_2 {
         int id;
         double balance,withdraw,deposit,monintrate,monint;
         String date;
+        //input of account number
         System.out.println("Enter the Account number of your account  :");
         id = s.nextInt();
+        //take initial balance
         System.out.println("Enter the initial balance your account  :");
         balance = s.nextDouble();
+        //take date from system
         System.out.println("Enter the date at which you created your account  :");
         date = s.next();
         
+        //create perameterized object of account
         account obj = new account(id, balance, date);
         obj.Accessor();
         monintrate = obj.getMonthlyInterestRate();
@@ -27,6 +36,8 @@ public class pr_2_2 {
 
         System.out.println("Enter 1 to withdraw and 2 to deposit.");
         i = s.nextInt();
+
+        //switch case for withdraw money or deposite money
         switch(i)
         {
             case 1 :
@@ -57,8 +68,10 @@ public class pr_2_2 {
         int p=1;
         while(p==1)
         {
+            //for use another account
             System.out.println("Enter 1 use another account and 2 to not.");
             i = s.nextInt();
+
             if(i==1)
             {
                 System.out.println("Enter the Account number of your account  :");
@@ -77,6 +90,7 @@ public class pr_2_2 {
                 System.out.println("Enter 1 to withdraw and 2 to deposit.");
                 i = s.nextInt();
                 
+                //again use switch case to withdraw or deposite money
                 switch(i)
                 {
                     case 1 :

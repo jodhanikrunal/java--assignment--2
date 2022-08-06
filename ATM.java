@@ -3,14 +3,17 @@ public class ATM {
     private final String id;
     private double balance;
 
+    //method which returns ID
     public String getId() {
         return id;
     }
 
+    //method which returns balance
     public double getBalance() {
         return balance;
     }
 
+    //default constructor
     public ATM() {
         count++;
         if (count < 10) {
@@ -21,6 +24,7 @@ public class ATM {
         balance = 300;
     }
 
+    //withsraw method
     public void withdraw(double money) {
         if (balance - money >= 300) {
             balance -= money;
@@ -31,12 +35,14 @@ public class ATM {
         }
     }
 
+    //deposite method
     public void deposit(double amount) {
         balance += amount;
         System.out.println(amount + "Rs deposited to your account.");
         System.out.println("Current Balance is : " + balance);
     }
 
+    //method for transfering money
     public void MoneyTransfer(ATM obj, double amount) {
         if (balance - amount >= 300) {
             balance -= amount;

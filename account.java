@@ -1,25 +1,30 @@
 import java.util.*;
 
 public class account {
+    //declare variable as given in question
     static public int id;
     static public double balance;
     final static private double annualInterestRate = 7;
     static public String dateCreated;
 
+    //default constructor
     public account() {
         id = 0;
         balance = 500;
         dateCreated = "06/11/2003";
     }
 
+    //object of scanner class
     static Scanner s = new Scanner(System.in);
 
+    //perimeterized constructor
     public account(int Ac, double bal, String d) {
         id = Ac;
         balance = bal;
         dateCreated = d;
     }
 
+    //accessor method
     public void Accessor() {
         System.out.println("Your Account  :" + id);
         System.out.println("Total balance in your account is  :" + balance + " Rupees");
@@ -27,28 +32,34 @@ public class account {
         System.out.println("The at which your account was created is  :" + dateCreated);
     }
 
+    //mutator method
     public void mutator(int ac, double bal, String d) {
         id = ac;
         balance = bal;
         dateCreated = d;
     }
 
+    //method to get monthly Interest Rate
     public double getMonthlyInterestRate() {
         return annualInterestRate / 12;
     }
 
+    //method to get monthly Interest
     public double getMonthlyInterest() {
         return (annualInterestRate / 12) * balance / 100;
     }
 
+    //withdraw method
     public void withdraw(double draw) {
         balance =  balance - draw;
     }
 
+    //deposite method
     public double deposit(double dep) {
         return balance + dep;
     }
 
+    //method overriding 
     @Override
     public String toString() {
         String res = "";

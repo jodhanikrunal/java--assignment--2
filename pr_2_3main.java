@@ -1,13 +1,20 @@
+//Name : Krunal Jodhani
+//ID no : 21CE045
+//Git Hub link : https://github.com/jodhanikrunal/java--assignment--2
+
+
 import java.util.*;
 
 public class pr_2_3main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        //declare variable as given
         String id = "";
         String id2 = "";
         boolean flag = true;
         int choice;
         double amt;
+        //sreate arraylist for 10 ID
         ArrayList<ATM> people = new ArrayList<ATM>();
         for (int i = 1; i <= 10; i++) {
             people.add(new ATM());
@@ -16,6 +23,7 @@ public class pr_2_3main {
         id = sc.next();
         int userNumber = userID(id, people);
 
+        //choice for switch case
         while (flag) {
             System.out.println();
             System.out.println("Make a choice......");
@@ -27,6 +35,8 @@ public class pr_2_3main {
             System.out.println("6.Deactivate Account");
             System.out.println("7.Exit ");
             choice = sc.nextInt();
+
+            //switch case for above condition
             switch (choice) {
                 case 1 -> {
                     System.out.println("Account Number : " + id);
@@ -67,6 +77,7 @@ public class pr_2_3main {
 
     }
 
+    //method for show user data
     public static int userID(String id, ArrayList<ATM>people) {
         Scanner s = new Scanner(System.in);
         int user = 10000;
